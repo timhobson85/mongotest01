@@ -1,6 +1,6 @@
 const { Author } = require('../models');
 
-const AuthorController = {
+const AuthorsController = {
   async index(req, res){
     const authors = await Author
       .find()
