@@ -4,14 +4,13 @@ const express = require('express'),
   router = express.Router(),
 
   { AuthorsController, 
-    BooksController } = require('../controllers');
+    BooksController } = require('./controllers');
 
 module.exports = function(app) {
 
   
   router.get('/authors', AuthorsController.index);
   router.get('/authors/:id', AuthorsController.show);
-  router.get('/', AuthorsController.show);
 
   app.use('/api', router);
 };
