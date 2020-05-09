@@ -11,6 +11,7 @@ module.exports = function(app) {
   
   router.get('/authors', AuthorsController.index);
   router.get('/authors/:id', AuthorsController.show);
+  router.get('/books', BooksController.index);
 
   app.use('/api', router);
 };
